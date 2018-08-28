@@ -14,83 +14,12 @@ angular
       .post (link, {country_id: 602, category_id: 1, page: 1})
       .then (function (response) {
         console.log (response.data.businesses);
-        $scope.slide_items = response.data.businesses;
+		$scope.slide_items = response.data.businesses;
+		$scope.menu_items =	response.data.businesses;
       });
 
     //loads the menu
-    $scope.menu_items = [
-      {
-        p_id: '1',
-        p_name: 'New Chicken Maharaja',
-        p_description: 'Product Description',
-        p_image_id: 'slide_1',
-        p_price: '8',
-      },
-
-      {
-        p_id: '2',
-        p_name: 'Big Spicy Chicken Wrap',
-        p_description: 'Product Description',
-        p_image_id: 'slide_2',
-        p_price: '7',
-      },
-
-      {
-        p_id: '3',
-        p_name: 'aig Spicy Paneer Wrap',
-        p_description: 'Product Description',
-        p_image_id: 'slide_3',
-        p_price: '6',
-      },
-
-      {
-        p_id: '14',
-        p_name: 'Smoothie',
-        p_description: 'Product Description',
-        p_image_id: 'Smoothie',
-        p_price: '4',
-      },
-
-      {
-        p_id: '15',
-        p_name: 'coke',
-        p_description: 'Product Description',
-        p_image_id: 'coke',
-        p_price: '2',
-      },
-
-      {
-        p_id: '16',
-        p_name: 'fanta',
-        p_description: 'Product Description',
-        p_image_id: 'fanta',
-        p_price: '2',
-      },
-
-      {
-        p_id: '17',
-        p_name: 'sprite',
-        p_description: 'Product Description',
-        p_image_id: 'sprite',
-        p_price: '2',
-      },
-
-      {
-        p_id: '18',
-        p_name: 'Filet-O-Fish',
-        p_description: 'Product Description',
-        p_image_id: 'filet_o_fish',
-        p_price: '5',
-      },
-
-      {
-        p_id: '19',
-        p_name: 'Salad wrap',
-        p_description: 'Product Description',
-        p_image_id: 'salad_wrap',
-        p_price: '7',
-      },
-    ];
+    
 
     //sorting in menu
     var reverse = null;
